@@ -1,30 +1,36 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import HelloWorld from './components/ORMGreeting.vue'
+// import TheWelcome from './components/TheWelcome.vue'
+import RMInfo from './components/RMInfo.vue';
+import InfoDisplay from './components/InfoDisplay.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="content-wrapper">
+    <header>
+      <div class="wrapper">
+        <HelloWorld msg="1RM Calculator" />
+      </div>
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <main>
+      <!-- <TheWelcome /> -->
+      <RMInfo />
+      <InfoDisplay />
+    </main>
+  </div>
 </template>
 
 <style scoped>
+
 header {
   line-height: 1.5;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.content-wrapper {
+  border: solid 1px;
+  border-radius: 1rem;
+  /* padding: 1rem; */
 }
 
 @media (min-width: 1024px) {
